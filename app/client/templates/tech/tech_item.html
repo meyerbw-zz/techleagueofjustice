@@ -1,0 +1,15 @@
+<template name="TechItem">
+  <div id="tech-item-{{_id}}" class="card-panel tech-item fade">
+    <div class="row">
+      <div class="col s1 score-wrapper">
+        {{#if currentUser}}<span class="vote-control material-icons {{voteClass _id 'up'}}" data-tech-id="{{_id}}" data-vote-direction="up">change_history</span>{{/if}}
+        <span class="score">{{score}}</span>
+        {{#if currentUser}}<span class="vote-control material-icons {{voteClass _id 'down'}}" data-tech-id="{{_id}}" data-vote-direction="down">details</span>{{/if}}
+      </div>
+      <div class="col s10">
+        <h6><a href="{{url}}">{{name}}</a> <span>{{domain}}</span></h6>
+        <p>{{description}}</p>
+      </div>
+    </div>        
+  </div>
+</template>

@@ -1,0 +1,15 @@
+<template name="MasterLayout">
+  <nav>
+    <div class="nav-wrapper row blue darken-2">
+      <div class="col s12">
+        <a href="/" class="brand-logo center">Tech League of Justice</a>
+        <ul class="right">
+          <li class="nav-button">{{> atNavButton}}</li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    {{> yield}}
+  </div>
+</template>
